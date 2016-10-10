@@ -111,8 +111,7 @@ public class Analcraft {
             Scanner answerColorNow = new Scanner(System.in);
             finalAnswer = answerColorNow.next();
             System.out.println("");
-            yourTries++;
-       
+                   
             if (finalAnswer.equalsIgnoreCase(random1)) {
                 System.out.println("\nCorrect! Well Done! You chose " 
                     + random1 + "!");
@@ -132,6 +131,7 @@ public class Analcraft {
                 else {
                     System.out.println(finalAnswer + " ? ");
                     System.out.print("\nIncorrect! Try another color : ");
+		    yourTries++;
                     win = false;
                 }
         }
