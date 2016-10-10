@@ -31,7 +31,7 @@ public class Analcraft {
     }
 
 	public static void anyKey() { 
-	System.out.println("Press 'Enter' to continue...");
+	System.out.println("\nPress 'Enter' to continue...");
 
           try {
             System.in.read();
@@ -46,10 +46,11 @@ public class Analcraft {
 	Analcraft enterIt = new Analcraft();
 
         Scanner GuessMe = new Scanner(System.in);
-        System.out.println("- ANALCRAFT - v 1.0.1"
-                + "\n(c) 2016 by Glen The American Patriot"
+        System.out.println("- Analcraft - v 1.0.1"
+                + "\nPasteright (p)  2016 -  Glen The American -"
                 + "\n CHICAGO CUBS "
-                + "\n----------------- ");
+        	+ "\n Enquiry : glen.mt.pot@gmail.com "
+		+ "\n----------------- ");
 	Analcraft.anyKey();
 
         System.out.print("Please enter your given name : ");
@@ -111,7 +112,8 @@ public class Analcraft {
             Scanner answerColorNow = new Scanner(System.in);
             finalAnswer = answerColorNow.next();
             System.out.println("");
-                   
+            
+       
             if (finalAnswer.equalsIgnoreCase(random1)) {
                 System.out.println("\nCorrect! Well Done! You chose " 
                     + random1 + "!");
@@ -131,7 +133,7 @@ public class Analcraft {
                 else {
                     System.out.println(finalAnswer + " ? ");
                     System.out.print("\nIncorrect! Try another color : ");
-		    yourTries++;
+                    yourTries++;
                     win = false;
                 }
         }
