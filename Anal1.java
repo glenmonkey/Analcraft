@@ -6,7 +6,7 @@ public class Analcraft {
     
     // String Array COLOR_LIST is declared static - accessible anywhere
     static String[] COLOR_LIST = new String[] { "Amber", "Aqua", "Auburn", 
-            "Bronze", "Brown", "Beige", "Black", "Blue", "Cream", "Crimson", 
+            "Beige", "Black", "Blue", "Bronze", "Brown", "Cream", "Crimson", 
             "Cyan", "Emerald", "Fuchsia", "Gold", "Gray", "Green", "Ivory", 
             "Maroon", "Navy", "Olivedrab", "Orange", "Pink", "Purple", 
             "Rainbow", "Turquoise", "Violet", "White", "Yellow" };
@@ -14,83 +14,82 @@ public class Analcraft {
     // int 'i' and 'count' declared static for the same reason
     static int i, count = 0;
     
-  public static void printWelcMessage() {
-          System.out.println("- Analcraft - v 1.0.1"
+    public static void printWelcMessage() {
+        System.out.println("- Analcraft - v 1.0.1"
                 + "\nPasteright (p)  2016 -  Glen The American -"
                 + "\n CHICAGO CUBS "
-        	      + "\n Enquiry : glen.mt.pot@gmail.com "
-		            + "\n----------------- ");
-  }
+        	+ "\n Enquiry : glen.mt.pot@gmail.com "
+		+ "\n----------------- ");
+    }
     
     /** printColors() method created to print values in the String[] array
      *  5 words will be printed per line
      */
-	public static void printColors() {
+    public static void printColors() {
         // 'for' loop is utilized as the total number of values is known.
         for (i = 0; i < COLOR_LIST.length; i++) {
             System.out.print(COLOR_LIST[i] + " ");
             count++;
 
             if (count == 5) {
-                    System.out.print("\n");
-                    count = 0;
+                System.out.print("\n");
+                count = 0;
             }
         }
     }
 
-	public static void anyKey() { 
-	    System.out.println("\nPress 'Enter' to continue...");
-
-          try {
+    public static void anyKey() { 
+	System.out.println("\nPress 'Enter' to continue...");
+        try {
             System.in.read();
-          }  
+         }  
         
-	        catch(Exception e) {
-          }  
- 	}	
+	catch(Exception e) {
+        }  
+    }	
     
-  public static void main(String[] args) {
-      // Scanner() method to allow user inputs
-	   Analcraft enterIt = new Analcraft();
-     Analcraft.printWelcMessage();
+    public static void main(String[] args) {
+        // Scanner() method to allow user inputs
+	Analcraft enterIt = new Analcraft();
+        Analcraft.printWelcMessage();
 
-     Scanner GuessMe = new Scanner(System.in);
-     Analcraft.anyKey();
+        Scanner GuessMe = new Scanner(System.in);
+        Analcraft.anyKey();
 
-     System.out.print("Please enter your given name : ");
+        System.out.print("Please enter your given name : ");
         
-     String name = GuessMe.next();
-     System.out.println("\nHello, " + name + "!"
+        String name = GuessMe.next();
+        System.out.println("\nHello, " + name + "!"
                 + "\n\nNow, " + name + ", your objective is to guess the "
                 + "\ncolor of my anus by choosing the correct one from list "
                 + "\nwhich will be provided shortly. ");
-	   Analcraft.anyKey();
-	   System.out.println("\nFYI, since the color of my anus varies depending " 
-		            + "\non my daily mood, you will have to select a number of "
+	Analcraft.anyKey();
+	System.out.println("\nFYI, since the color of my anus varies depending " 
+		+ "\non my daily mood, you will have to select a number of "
                 + "\ndifferent colors to get to know my anus better. "
-	       	      + "\n\nNow, " + name + ", Do you wish to continue?");
+	       	+ "\n\nNow, " + name + ", Do you wish to continue?");
 	
-     System.out.print("Yes / No : ");
-     String answerit = GuessMe.next();
-     Analcraft anal = new Analcraft();
+        System.out.print("Yes / No : ");
+        String answerit = GuessMe.next();
+        Analcraft anal = new Analcraft();
         
-     if (answerit.equalsIgnoreCase("yes")) {
-         System.out.println("\n\nGreat! Here is the list of colors below"
+        if (answerit.equalsIgnoreCase("yes")) {
+            System.out.println("\n\nGreat! Here is the list of colors below"
                           + "\n");
-         Analcraft.printColors();
-     }
-         else {
-            System.out.println("Well, fuck off!");
-            System.exit(0);
-         }
+            Analcraft.printColors();
+        }
+            else {
+                System.out.println("Well, fuck off!");
+                System.exit(0);
+            }
         
-     System.out.println("\n"
+        System.out.println("\n"
                 + "\nType 'list' and press Enter "
                 + "anytime to retrieve the color list."
                 + "\nTo exit this game, type 'exit' anytime and "
                 + "press Enter"
                 + "\nYour answers do not need to be case-sensitive :)");
-     System.out.print("Now, " + name + ", guess what the color of my "
+        System.out.print("\nNow, " + name + ", guess what the color of my "
                 + "anus is : ");
         
         
@@ -140,10 +139,14 @@ public class Analcraft {
         }
         
         // Total Tries - 1 will display total number of failed tries.
-        int finalTries = yourTries - 1;
-        System.out.println("\nYou have failed " + finalTries + " times.");
+        if (yourTries == 0) {
+            System.out.println("PERFECT! " + name + "!"
+                            + "How did you do that??");
+        }
+            else {
+                System.out.println("\nYou have failed " + yourTries + " times.");
+            }
+            
         System.out.println("\nStayin' Alive"); 
     }
 }
-    
-    
